@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+  <defs>
+    <linearGradient id="a" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+  </defs>
+  <rect x="0" y="0" width="160" height="160" rx="80" fill="url(#a)"/>
+  <text x="80" y="96" text-anchor="middle" font-size="64" font-family="Inter, system-ui" fill="#111">M</text>
+</svg>
