@@ -8,7 +8,7 @@ export type CtaLinkProps = React.PropsWithChildren<
     href: string
     gaEvent?: string
     fbEvent?: string
-    eventParams?: Record<string, any>
+    eventParams?: Record<string, unknown>
   }
 >
 

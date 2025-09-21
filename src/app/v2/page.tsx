@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import Trackers from "./trackers"
 import CtaLink from "./cta-link"
 import LeadForm from "./lead-form"
-import { CircleCheck, CircleX, Clock, DollarSign, Zap, AlertTriangle, Package, Rocket, Coins, Target, Users } from "lucide-react"
+import { CircleCheck, CircleX, Clock, DollarSign, Zap, Package, Rocket, Coins, Target, Users } from "lucide-react"
 import Visible from "@/components/Visible"
 import HeroCarousel from "./HeroCarousel"
 

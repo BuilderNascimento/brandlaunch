@@ -75,7 +75,11 @@ export default function HeroCarousel() {
   const onTouchEnd = () => {
     const threshold = 50
     if (Math.abs(touchDeltaX.current) > threshold) {
-      touchDeltaX.current < 0 ? next() : prev()
+      if (touchDeltaX.current < 0) {
+        next()
+      } else {
+        prev()
+      }
     }
     touchStartX.current = null
     touchDeltaX.current = 0
