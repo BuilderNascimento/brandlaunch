@@ -62,7 +62,6 @@ export default function HeroVideo({ videoId }: { videoId: string }) {
           mute: 1,
           loop: 1,
           playlist: videoId,
-          // Important to allow JS API control
           enablejsapi: 1,
         },
         events: {
@@ -120,7 +119,7 @@ export default function HeroVideo({ videoId }: { videoId: string }) {
   }
 
   return (
-    <div className="relative overflow-hidden rounded-xl h-[260px] md:h-[340px]">
+    <div className="hero-video-box relative overflow-hidden rounded-xl">
       {/* YouTube Player Mount */}
       <div ref={containerRef} className="absolute inset-0 w-full h-full rounded-xl" />
 
@@ -160,12 +159,23 @@ export default function HeroVideo({ videoId }: { videoId: string }) {
         </div>
       </div>
 
-      {/* Fallback CTA while player não está pronto */}
+      {/* Fallback CTA enquanto o player não está pronto */}
       {!ready && (
         <div className="absolute inset-0 flex items-center justify-center bg-black/5">
           <div className="animate-pulse rounded-full bg-black/10 px-4 py-2 text-xs text-neutral-700">Carregando vídeo…</div>
         </div>
       )}
+
+      <style jsx>{`
+        /* Reprodutor vertical em mobile (9:16) e horizontal em desktop (16:9) */
+        .hero-video-box { width: 100%; position: relative; }
+        @media (max-width: 767.98px) {
+          .hero-video-box { aspect-ratio: 9 / 16; height: auto; }
+        }
+        @media (min-width: 768px) {
+          .hero-video-box { aspect-ratio: 16 / 9; height: auto; }
+        }
+      `}</style>
     </div>
   )
 }
