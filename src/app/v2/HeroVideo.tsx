@@ -167,14 +167,8 @@ export default function HeroVideo({ videoId }: { videoId: string }) {
       )}
 
       <style jsx>{`
-        /* Reprodutor vertical em mobile (9:16) e horizontal em desktop (16:9) */
-        .hero-video-box { width: 100%; position: relative; }
-        @media (max-width: 767.98px) {
-          .hero-video-box { aspect-ratio: 9 / 16; height: auto; }
-        }
-        @media (min-width: 768px) {
-          .hero-video-box { aspect-ratio: 16 / 9; height: auto; }
-        }
+        /* Fixar 16:9 em todas as plataformas */
+        .hero-video-box { width: 100%; position: relative; aspect-ratio: 16 / 9; height: auto; }
       `}</style>
     </div>
   )

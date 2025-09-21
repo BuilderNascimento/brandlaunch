@@ -88,7 +88,7 @@ export default function PageV2() {
 
           {/* Carrossel do Hero */}
           <div className="rounded-3xl border bg-white shadow-sm p-6">
-            <HeroVideo videoId="f4kdjSOtASE" />
+            <HeroVideo videoId="W_Glq_XFYOQ" />
           </div>
         </div>
       </section>
