@@ -11,6 +11,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
+  ),
   title: "BrandLaunch — Lance sua marca com facilidade",
   description:
     "Landing page para influenciadores interessados em lançar sua própria linha de produtos sem complicação. Cadastre-se para a lista de espera.",

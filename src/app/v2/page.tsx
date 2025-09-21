@@ -23,8 +23,7 @@ export const metadata: Metadata = {
 }
 
 export default function PageV2() {
-   const heroVariant: 'default' | 'minimal' = 'default'
-   return (
+  return (
      <main className="min-h-screen bg-white text-neutral-900 [--color-primary:#FF4C29] [--color-secondary:#6C63FF]">
       <Trackers page="/v2" />
       {/* Top bar with wordmark */}
@@ -58,7 +57,14 @@ export default function PageV2() {
               <span className="inline-block size-2 rounded-full bg-[var(--color-primary)]" /> ⚡ Sem estoque • Logística inclusa • Até 20 dias
             </div>
             <h1 className="text-3xl font-extrabold tracking-tight md:text-5xl">
-              Construa sua marca. Lançamento garantido em até{' '}
+              Construa sua{' '}
+              <span
+                className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)] bg-clip-text text-transparent uppercase fade-in"
+                style={{ animationDelay: '60ms' }}
+              >
+                MARCA
+              </span>
+              . Lançamento garantido em até{' '}
               <span className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)] bg-clip-text text-transparent fade-in" style={{animationDelay: '120ms'}}>
                 20 dias
               </span>.
@@ -66,13 +72,7 @@ export default function PageV2() {
             <div className="mt-3 inline-flex w-fit items-center rounded-full bg-[#F4F4F5] px-3 py-1.5 text-xs md:text-sm font-semibold text-neutral-900">
               50 influenciadores já confiam na Brand Launch
             </div>
-            {heroVariant === 'minimal' ? (
-              <p className="mt-4 text-lg text-neutral-700">Transforme sua audiência em uma marca lucrativa.</p>
-            ) : (
-              <p className="mt-4 text-lg text-neutral-600">
-                Sem estoque e sem logística. Você traz a marca; nós cuidamos de design, loja e operação completa.
-              </p>
-            )}
+            <p className="mt-4 text-lg text-neutral-700">Transforme sua audiência em uma marca lucrativa.</p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link href="#lead" aria-label="Quero lançar minha marca agora" className="inline-flex items-center justify-center rounded-lg bg-[var(--color-primary)] px-5 py-3 text-white shadow-sm transition hover:brightness-90">
                 Quero lançar minha marca agora
