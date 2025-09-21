@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 }
 
 export default function PageV2() {
-   const heroVariant: 'default' | 'minimal' = 'default'
+  let heroVariant: string = 'default'
    return (
      <main className="min-h-screen bg-white text-neutral-900 [--color-primary:#FF4C29] [--color-secondary:#6C63FF]">
       <Trackers page="/v2" />
