@@ -8,6 +8,7 @@ import CtaLink from "./cta-link"
 import LeadForm from "./lead-form"
 import { CircleCheck, CircleX, Clock, DollarSign, Zap, Package, Rocket, Coins, Target, Users } from "lucide-react"
 import Visible from "@/components/Visible"
+import HeroVideo from "./HeroVideo"
 
 export const metadata: Metadata = {
   title: "BrandLaunch – Lance sua marca em 20 dias, sem estoque",
@@ -87,17 +88,7 @@ export default function PageV2() {
 
           {/* Carrossel do Hero */}
           <div className="rounded-3xl border bg-white shadow-sm p-6">
-            <div className="relative overflow-hidden rounded-xl h-[260px] md:h-[340px]">
-              <iframe
-                className="absolute inset-0 h-full w-full rounded-xl"
-                src="https://www.youtube.com/embed/f4kdjSOtASE?autoplay=1&mute=1&playsinline=1&controls=0&rel=0&modestbranding=1&loop=1&playlist=f4kdjSOtASE"
-                title="Vídeo de apresentação"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowFullScreen
-                referrerPolicy="no-referrer-when-downgrade"
-                loading="lazy"
-              />
-            </div>
+            <HeroVideo videoId="f4kdjSOtASE" />
           </div>
         </div>
       </section>
